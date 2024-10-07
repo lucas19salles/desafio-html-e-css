@@ -1,0 +1,161 @@
+/* Aplicando reset no css padrão */
+* {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  font-family: "Roboto", sans-serif;
+}
+
+:root {
+  --cor-01: #ffffff;
+  --cor-02: #000000;
+  --cor-03: #0056fb;
+}
+
+img {
+  max-width: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+}
+
+.login {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+}
+
+.login-usuario,
+.usuario {
+  flex: 1;
+}
+
+.login-usuario {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.formulario {
+  width: 320px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+input[type="email"],
+input[type="password"],
+input[type="text"],
+button {
+  height: 40px;
+  margin-block: 10px;
+  border-radius: 4px;
+}
+
+input[type="email"],
+input[type="password"],
+input[type="text"] {
+  border: 1px solid #919191;
+  padding-left: 8px;
+}
+
+button {
+  border: none;
+  background: var(--cor-03);
+  color: var(--cor-01);
+  position: relative;
+}
+
+button::after {
+  content: "";
+  background: url("./assets/code.svg") no-repeat;
+  width: 92px;
+  height: 57px;
+  display: inline-block;
+  right: -48px;
+  color: #0000002c;
+  position: absolute;
+}
+
+p span {
+  padding-left: 10px;
+}
+
+.link {
+  font-weight: bold;
+}
+
+.link a {
+  color: var(--cor-02);
+  font-weight: normal;
+  padding-left: 6px;
+}
+
+.usuario {
+  background: var(--cor-03);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-inline: 20px;
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+}
+
+.imagem img {
+  width: 420px;
+  height: auto;
+}
+
+.usuario h2 {
+  font-size: 3.2rem;
+  color: var(--cor-01);
+  margin-block: 10px 20px;
+}
+
+.usuario p {
+  color: var(--cor-01);
+  font-weight: normal;
+  line-height: 1.6;
+}
+
+/* Responsividade */
+@media (max-width: 900px) {
+  .usuario h2 {
+    font-size: 2rem;
+  }
+
+  .usuario p {
+    font-size: 0.875rem;
+  }
+}
+
+@media (max-width: 750px) {
+  button::after {
+    background: none;
+  }
+
+  .login {
+    flex-direction: column;
+  }
+
+  .login-usuario p {
+    margin-bottom: 10px;
+  }
+
+  .usuario img {
+    margin-top: 60px;
+  }
+}
