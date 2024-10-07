@@ -151,11 +151,19 @@ p span {
     flex-direction: column;
   }
 
+  .login-usuario {
+    margin-top: 40px;
+  }
+
   .login-usuario p {
-    margin-bottom: 10px;
+    margin-bottom: 20px;
   }
 
   .usuario img {
     margin-top: 60px;
+  }
+
+  .usuario p {
+    margin-bottom: 40px;
   }
 }
